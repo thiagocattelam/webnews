@@ -9,12 +9,12 @@ test("GET to /api/v1/status should return 200", async () => {
   expect(responseBody.updated_at).toEqual(parsedUpdatedAt);
 });
 
-/*test("GET to /api/v1/status should return postgres version", async () => {
+test("GET to /api/v1/status should return postgres version", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
 
- const restests/integrationponseBody = await response.json();
+  const responseBody = await response.json();
   expect(responseBody.dependencies.database.version).toEqual("16.0");
-}); */
+});
 
 test("GET to /api/v1/status should return max connections database", async () => {
   const response = await fetch("http://localhost:3000/api/v1/status");
